@@ -1,0 +1,21 @@
+Name: geuzen-qml-utils
+Summary: Geuzen QML Utilities
+Version: 0.0.1
+Release: 1
+Group: System/Libraries
+License: LGPL 2.1
+URL: http://moui.sourceforge.net
+Sources:
+    - "%{name}-%{version}.tar.bz2"
+Description: |
+    Common Geuzen QML components
+PkgConfigBR:
+  - QtDeclarative
+  - QtCore
+PkgBR:
+  - gcc-c++
+Configure: none
+Builder: qmake
+Files:    
+    - "%{_libdir}/qt4/imports/moui/geuzen/utils/libgeuzen-qml-utils.so"
+    - "%{_libdir}/qt4/imports/moui/geuzen/utils/qmldir"        

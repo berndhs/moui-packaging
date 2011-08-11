@@ -1,0 +1,120 @@
+Name: geuzen-ux-panels
+Summary: Geuzen UX Panels Interface
+Version: 0.0.0.9
+Release: 1
+Group: System/GUI/Other
+License: Apache 2.0
+URL: http://moui.sf.net
+Sources:
+    - "%{name}-%{version}.tar.bz2"
+
+Description: |
+     Panel core infrastructure for the Geuzen UX
+    
+PkgBR:
+    - pkgconfig(QtCore) >= 4.7.1
+Configure: none
+Builder: qmake
+Requires:
+    - "%{name} >= %{version}"
+    - meegolabs-ux-components >= 0.2.8.1
+    - meego-ux-components >= 0.2.8.11
+    - meego-ux-theme
+    - meego-ux-appgrid
+    - geuzen-ux-daemon
+    - meego-ux-sharing-qml
+    - meego-ux-sharing-qml-ui
+    - meego-ux-settings >= 0.3.5
+Files:
+    - "%{_libdir}/qt4/imports/MeeGo/Panels"
+    - "%{_datadir}/geuzen-ux-panels/main.qml"
+    - "%{_datadir}/geuzen-ux-panels/panels/.keep"
+
+SubPackages:
+    - Name: friends
+      Summary: Friends Panel
+      Group: System/GUI/Other
+      Description: Panel that surfaces your friends social networking activity, emails, and IMs
+      Requires:
+        - meego-ux-content
+        - meego-ux-settings-socialweb
+      Files:
+        - "%{_datadir}/geuzen-ux-panels/friends"
+        - "%{_datadir}/geuzen-ux-panels/panels/friends.panel"
+
+    - Name: web
+      Summary: Web Panel
+      Group: System/GUI/Other
+      Description: Panel that surfaces your browser activity
+#      Requires:
+#        - meego-app-browser
+      Files:
+        - "%{_datadir}/geuzen-ux-panels/web"
+        - "%{_datadir}/geuzen-ux-panels/panels/web.panel"
+
+    - Name: video
+      Summary: Video Panel
+      Group: System/GUI/Other
+      Description: Panel that surfaces your video content
+      Requires:
+        - meego-app-video
+        - meego-ux-media
+      Files:
+        - "%{_datadir}/geuzen-ux-panels/video"
+        - "%{_datadir}/geuzen-ux-panels/panels/videos.panel"
+
+    - Name: photos
+      Summary: Photos Panel
+      Group: System/GUI/Other
+      Description: Panel that surfaces your photo content
+      Requires:
+        - meego-app-photos
+        - meego-ux-media >= 0.2.16
+      Files:
+        - "%{_datadir}/geuzen-ux-panels/photos"
+        - "%{_datadir}/geuzen-ux-panels/panels/photos.panel"
+
+    - Name: music
+      Summary: Music Panel
+      Group: System/GUI/Other
+      Description: Panel that surfaces your music content
+      Requires:
+        - meego-app-music
+        - meego-ux-media
+      Files:
+        - "%{_datadir}/geuzen-ux-panels/music"
+        - "%{_datadir}/geuzen-ux-panels/panels/music.panel"
+
+    - Name: ifcfg
+      Summary: Ifconfig Panel
+      Group: System/GUI/Other
+      Description: Panel that displays network information
+      Requires:
+        - geuzen-qml-utils
+      Files:
+        - "%{_datadir}/geuzen-ux-panels/ifcfg"
+        - "%{_datadir}/geuzen-ux-panels/panels/ifcfg.panel"
+
+    - Name: mytablet
+      Summary: My Tablet Panel
+      Group: System/GUI/Other
+      Description: Panel that surfaces information about your Geuzen Tablet
+      Requires:
+        - meego-ux-settings
+        - meego-ux-media
+        - connman-qt-declarative
+      Files:
+        - "%{_datadir}/geuzen-ux-panels/mytablet"
+        - "%{_datadir}/geuzen-ux-panels/panels/mytablet.panel"
+
+    - Name: meta-tablet
+      Summary: Tablet Panels meta package
+      Group: System/GUI/Other
+      Description: Meta package to pull in the panels used in the Geuzen Tablet UX
+      Requires:
+        - "geuzen-ux-panels-friends >= %{version}"
+        - "geuzen-ux-panels-web >= %{version}"
+        - "geuzen-ux-panels-video >= %{version}"
+        - "geuzen-ux-panels-photos >= %{version}"
+        - "geuzen-ux-panels-music >= %{version}"
+        - "geuzen-ux-panels-mytablet >= %{version}"

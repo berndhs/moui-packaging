@@ -1,0 +1,21 @@
+Name: geuzen-ux-theme
+Summary: Geuzen UX Theme
+Version: 0.0.2
+Release: 1
+Group: System/GUI/Other
+License: Restricted
+URL: http://www.meego.com
+Sources:
+    - "%{name}-%{version}.tar.bz2"
+Description: |
+    Tablet Theme
+    
+    Requires: %{name} >= %{version}
+    Requires: libqtcore4
+
+PkgBR:
+    - pkgconfig(QtCore) >= 4.6.0
+Configure: none
+Builder: qmake
+Files:
+    - /usr/share/themes/1024-600-10

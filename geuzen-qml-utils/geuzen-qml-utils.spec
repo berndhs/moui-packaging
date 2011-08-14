@@ -22,13 +22,14 @@ make INSTALL_ROOT=%{buildroot} install
 
 Name:       geuzen-qml-utils
 Summary:    Geuzen QML Utilities
-Version:    0.0.1
-Release:    1
+Version:    0.0.4
+Release:    2
 Group:      System/Libraries
 License:    LGPL 2.1
 URL:        http://moui.sourceforge.net
 Source0:    %{name}-%{version}.tar.bz2
 Source100:  geuzen-qml-utils.yaml
+Requires:   /bin/sh
 BuildRequires:  pkgconfig(QtDeclarative)
 BuildRequires:  pkgconfig(QtCore)
 BuildRequires:  gcc-c++

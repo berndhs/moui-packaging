@@ -7,7 +7,7 @@
 
 Name:       geuzen-ux-panels
 Summary:    Geuzen UX Panels Interface
-Version:    0.0.0.9
+Version:    0.0.1.7
 Release:    1
 Group:      System/GUI/Other
 License:    Apache 2.0
@@ -24,6 +24,7 @@ Requires:   meego-ux-sharing-qml
 Requires:   meego-ux-sharing-qml-ui
 Requires:   meego-ux-settings >= 0.3.5
 BuildRequires:  pkgconfig(QtCore) >= 4.7.1
+Obsoletes:   meego-ux-panels
 
 
 %description

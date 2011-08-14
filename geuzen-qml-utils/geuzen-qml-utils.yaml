@@ -1,7 +1,7 @@
 Name: geuzen-qml-utils
 Summary: Geuzen QML Utilities
-Version: 0.0.1
-Release: 1
+Version: 0.0.4
+Release: 2
 Group: System/Libraries
 License: LGPL 2.1
 URL: http://moui.sourceforge.net
@@ -14,6 +14,8 @@ PkgConfigBR:
   - QtCore
 PkgBR:
   - gcc-c++
+Requires:
+  - /bin/sh
 Configure: none
 Builder: qmake
 Files:    

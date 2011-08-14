@@ -1,2 +1,12 @@
+* Sat Aug 13 2011 Bernd Stramm <bernd.stramm@gmail.com> - 0.0.4
+- add qml-text-browser
+- add text service to ip-list based on qml-text-browser
+
+* Fri Aug 12 2011 Bernd Stramm <bernd.stramm@gmail.com> - 0.0.3
+- add ip list types
+
+* Thu Aug 11 2011 Bernd Stramm <bernd.stramm@gmail.com> - 0.0.2
+- function to retrieve current accumulated data
+
 * Tue Aug 09 2011 Bernd Stramm <bernd.stramm@gmail.com> - 0.0.1
 - initial packaging

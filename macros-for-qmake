@@ -1,0 +1,17 @@
+# >> macros
+%if X%{_vendor} == "Xmeego"
+%define my_buildhost "meego"
+%else
+%define my_exec_dir "/usr/bin"
+%if X%{_vendor} == "Xredhat"
+%define qmake qmake-qt4 \
+make
+%else
+%define qmake qmake \
+make
+%endif
+%define qmake_install mkdir -p %{buildroot}%{my_exec_dir} && \
+make INSTALL_ROOT=%{buildroot} install
+%define my_buildhost non-meego-%{vendor}
+%endif
+# << macros

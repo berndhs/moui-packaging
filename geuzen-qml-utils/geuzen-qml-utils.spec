@@ -22,8 +22,8 @@ make INSTALL_ROOT=%{buildroot} install
 
 Name:       geuzen-qml-utils
 Summary:    Geuzen QML Utilities
-Version:    0.0.4
-Release:    2
+Version:    0.0.5
+Release:    4
 Group:      System/Libraries
 License:    LGPL 2.1
 URL:        http://moui.sourceforge.net

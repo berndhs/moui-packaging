@@ -1,3 +1,7 @@
+* Sun Aug 14 2011 Bernd Stramm <bernd.stramm@gmail.com> - 0.0.5
+- add support for css settable from QML in ip-list
+- clean up QObject parenting in ip-list, ip-interface
+
 * Sat Aug 13 2011 Bernd Stramm <bernd.stramm@gmail.com> - 0.0.4
 - add qml-text-browser
 - add text service to ip-list based on qml-text-browser
